@@ -1,8 +1,12 @@
 {
-  "name": "easy",
+  "name": "simoneramo",
   "version": "0.0.1",
   "description": "soon",
   "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simoneramo/simoneramo.github.io.git"
+  },
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^1.6.3",
