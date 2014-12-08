@@ -1,0 +1,35 @@
+$use-base-lists: true !default;
+
+@if $use-base-lists == true{
+/* ==========================================================================
+   Base - Lists
+   ========================================================================== */
+  
+  @if $use-global-mb == true{
+    ul, ol, dl{
+      @include global-mb;
+    }
+  }
+
+  ul, ol, dd{ 
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  ul, ol{
+    padding-left: $space-1-half;
+  }
+
+  dl{
+    margin-top: 0;
+  }
+
+  dd{ 
+    margin-left: $space-1-half;
+  }
+
+  dt{ 
+    font-weight: bold; 
+  }
+
+}//endif

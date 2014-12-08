@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Config - Colours
+   ========================================================================== */
+
+// 1. custom
+// 2. background
+// 3. selection
+// 4. links
+// 5. headings
+// 6. type
+// 8. objects
+//  8.1 buttons
+//  8.2 hamburger
+//  8.3 notify
+//  8.4 form
+//  8.5 code
+// 8. form
+// 9. code
+// 10. links
+// 11. brands
+
+
+// http://en.wikipedia.org/wiki/Web_colors#HTML_color_names
+// custom
+$white:                   white;      //    #FFFFFF   rgb(100 100 100)
+$silver:                  silver;     //    #C0C0C0   rgb(75 75 75)
+$gray:                    gray;       //    #808080   rgb(50 50 50)
+$black:                   black;      //    #000000   rgb(0 0 0)
+$red:                     red;        //    #FF0000   rgb(100 0 0)
+$maroon:                  maroon;     //    #800000   rgb(50 0 0)
+$orange:                  orange;     //    #FFA500   rgb(255 16 50)
+$yellow:                  yellow;     //    #FFFF00   rgb(100 100 0)
+$olive:                   olive;      //    #808000   rgb(50 50 0)
+$lime:                    lime;       //    #00FF00   rgb(0 100 0)
+$green:                   green;      //    #008000   rgb(0 50 0)
+$aqua:                    aqua;       //    #00FFFF   rgb(0 100 100)
+$teal:                    teal;       //    #008080   rgb(0 50 50)
+$blue:                    blue;       //    #0000FF   rgb(0 0 100)
+$navy:                    navy;       //    #000080   rgb(0 0 50)
+$fuchsia:                 fuchsia;    //    #FF00FF   rgb(100 0 100)
+$purple:                  purple;     //    #800080   rgb(50 0 50)
+$pink:                    pink;       //    #FFC0CB   rgb(255 192 203)
+
+// background
+$bgc-1:                   #ffffff;
+$bgc-2:                   #f3f3f3;
+$bgc-3:                   #ccc;
+
+// selection 
+$c-selection:             #161616;
+$bgc-selection:           rgba(240, 233, 89, 0.9);
+
+// link 
+$c-link:                  #2046df;
+$c-link-hover:            #ec1831;
+$c-link-active:           #ff001e;
+$c-link-visited:          #d01fe0;
+
+// headings
+$c-heading-1:             #2c2c2c;
+$c-heading-2:             #424242;
+$c-heading-3:             #585858;
+
+// type
+$c-type-1:                #2c2c2c;
+$c-type-2:                #424242;
+$c-type-3:                #585858;
+
+//objects
+  // button
+  $c-btn-1:               #222222;
+  $c-btn-2:               #aeaeae;
+  $bgc-btn-1:             #bebebe;
+  $bgc-btn-2:             #a6a6a6;
+
+  // hamburger
+  $c-hamburger:           #ff001e;
+  
+  //spinner
+  $c-spinner:             #ff001e;
+
+  // notify
+  $c-notify-primary:      $bgc-btn-1;
+  $c-notify-success:      #4FC56B;
+  $c-notify-info:         #59A7F2;
+  $c-notify-warning:      #FADB40;
+  $c-notify-danger:       #F58E45;
+  $c-notify-error:        #F45757;
+
+  // form
+  $c-form-1:              #999999;
+  $c-form-2:              #777777;
+  $c-form-input:          #bebebe;
+  $c-form-hover:          $c-link-hover;
+  $c-form-active:         $c-link-active;
+  $c-form-focus:          $c-link-visited;
+
+  // code 
+  $bgc-code:              #f7f7f7;
+  $c-code:                #333333;
+
+// brands 
+$c-google:                rgb(211, 72, 54);
+$c-facebook:              rgb(59, 89, 152);
+$c-twitter:               rgb(0, 172, 237);
+$c-linkedin:              rgb(0, 123, 182);
+$c-dribble:               rgb(255, 51, 153);
+$c-instagram:             rgb(81, 127, 164);
+$c-googleplus:            rgb(221, 75, 57);
+$c-behance:               rgb(20, 120, 255);
+$c-gimmebar:              rgb(223, 61, 107);
+$c-github:                rgb(87, 87, 87);
+$c-tumblr:                rgb(50, 80, 109);
+$c-youtube:               rgb(187, 0, 0);
+$c-vine:                  rgb(0, 191, 143);
+$c-kickstarter:           rgb(125, 190, 75);
+$c-dropbox:               rgb(0, 126, 230);
+$c-rss:                   rgb(235, 127, 56);
+$c-facebook:              rgb(0, 126, 230);
+$c-codepen:               rgb(67, 67, 70);
+$c-foursquare:            rgb(45, 160, 199);
+$c-soundcloud:            rgb(247, 161, 50);
+$c-wordpress:             rgb(7, 160, 202); 
+$c-tumblr:                rgb(55, 84, 116);
+$c-blogger:               rgb(242, 128, 32);
+$c-squarespace:           rgb(51, 51, 51);
+$c-joomla:                rgb(94, 94, 94); 
+$c-drupal:                rgb(13, 139, 199);
+$c-typepad:               rgb(98, 152, 65);
+$c-expression-engine:     rgb(92, 129, 165); 
+$c-kirby:                 rgb(255, 4, 0); 
+$c-moveabletype:          rgb(156, 186, 202); 
+$c-disqus:                rgb(46, 159, 255); 
+$c-html:                  rgb(237, 62, 53); 

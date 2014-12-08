@@ -1,0 +1,44 @@
+$use-base-root: true !default;
+
+@if $use-base-root == true{
+/* ==========================================================================
+   Base - Root
+   ========================================================================== */
+
+  html {
+    overflow-y: scroll;
+    min-height: 100%;
+    word-wrap: break-word;
+    font:#{($f-base)}/#{$base-line-height} $f-base-family;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+
+  $use-border-box: true !default;
+    @if $use-border-box == true{
+      html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+    }
+  }
+
+
+  body{
+    min-height: 100%;
+    background-color: $bgc-1;
+    text-rendering: optimizeLegibility;   
+    color: $c-type-1;
+  }
+
+
+  ::selection{ 
+    background-color:$bgc-selection; 
+    color:$c-selection; 
+  }
+
+}//end if
