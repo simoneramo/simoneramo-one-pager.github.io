@@ -135,7 +135,7 @@
         '!app/_partials/**/*.jade',                                      // Exclude _partials directory from compiling in /app - app/_partials/**/*.html
       ])     
     .pipe($.jade({                                                     // Use gulp-jade
-      pretty: false                                                    // All Jade Options are available - http://jade-lang.com/api/
+      pretty: true                                                    // All Jade Options are available - http://jade-lang.com/api/
     }))
     .on('error', function(err){
       console.log(err.message);
@@ -158,28 +158,29 @@
   });
 
 
-  // optimize images > $ gulp images
+  // icons > $ gulp icons
   gulp.task('images', function () {
-    return gulp.src('app/assets/images/**/*')                            // Images Directory
-    .pipe($.cache($.imagemin({                                         // Use gulp-imagemin
-      optimizationLevel: 3,                                            // Default: 3: level between 0 and 7.
-      progressive: true,                                               // Lossless conversion to progressive.
-      interlaced: true                                                 // Interlace gif for progressive rendering.    
-    })))
-    .pipe(gulp.dest('_public/assets/images'))                          // Destination Path
-    //.pipe($.notify({ message: 'Images built and optimized' }))         // Notify
-    .pipe($.size({title: 'images size of'}));                          // Size
+    return gulp.src('app/assets/images/**/*')                             // Icons Directory
+    .pipe($.imagemin({                                         // Use gulp-imagemin 
+        optimizationLevel: 3,                                            // Default: 3: level between 0 and 7.
+        progressive: true,                                               // Lossless conversion to progressive.
+        interlaced: true                                                 // Interlace gif for progressive rendering.    
+    }))
+    .pipe(gulp.dest('_public/assets/images'))                           // Destination Path
+    //.pipe($.notify({ message: 'Images built and optimized' }))          // Notify
+    .pipe($.size({title: 'images size of'}));                           // Size
   });
+
 
 
   // icons > $ gulp icons
   gulp.task('icons', function () {
     return gulp.src('app/assets/icons/**/*')                             // Icons Directory
-    .pipe($.cache($.imagemin({                                         // Use gulp-imagemin 
+    .pipe($.imagemin({                                         // Use gulp-imagemin 
         optimizationLevel: 3,                                            // Default: 3: level between 0 and 7.
         progressive: true,                                               // Lossless conversion to progressive.
         interlaced: true                                                 // Interlace gif for progressive rendering.    
-    })))
+    }))
     .pipe(gulp.dest('_public/assets/icons'))                           // Destination Path
     //.pipe($.notify({ message: 'Icons built and optimized' }))          // Notify
     .pipe($.size({title: 'icons size of'}));                           // Size
@@ -188,7 +189,10 @@
 
   // copy root files > $ gulp copy
   gulp.task('copy', function () {
-    return gulp.src('app/*.{txt,md,htaccess,xml}', {
+    return gulp.src([
+      'app/*.{txt,md,htaccess,xml,ico}',
+      'app/{CNAME,htaccess,LICENCE}'
+      ], {
       dot: true
     }).pipe(gulp.dest('_public'))                                        // Destination Path
     //.pipe($.notify({ message: 'root files copied' }))                    // Notify

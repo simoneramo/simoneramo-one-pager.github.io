@@ -1,1 +1,0 @@
-// Jquery - bower_components/jquery/dist/

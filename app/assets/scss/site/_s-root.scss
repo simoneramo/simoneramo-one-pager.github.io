@@ -1,3 +1,69 @@
 /* ==========================================================================
    Site Root
    ========================================================================== */
+   
+  
+  html{
+    border: 10px solid #979fa3;  
+  }
+
+  body{
+    padding-top: $space-2;
+  }
+
+  html, body{
+    height: 100%;
+  }
+
+  .l-container {
+    @include center-content;
+    max-width: 50em;
+    text-align: center;
+    height: 100%;  
+    
+    &__inner{
+      height: 100%;
+      img{
+        width:200px;
+      }
+      h1{
+        padding-left: 20%;
+        padding-right: 20%;
+        font-size: $f-h2;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: 'source sans pro';
+        color: #cbcbcb;
+      }
+    }
+  }
+
+  .s-logo{
+    border: 3px solid #e0e0e0
+  }
+
+
+  .o-social-gallery{
+    margin-top: $space-4;
+    &__item{    
+      display:inline-block;
+      width: 10%;
+      margin: 2.5%;
+      a{
+        transition: all 0.1s;
+        &:hover{
+          transform: scale(1.25);
+          transition: all 0.08s;
+          background-color: red;
+        }
+      }
+      &.instagram a {     background-color: #ecac24; }
+      &.gimmebar a {      background-color: #f06d54; }
+      &.twitter a {       background-color: #03a7ff; }
+      &.github a {        background-color: #1ba54c; }
+      &.dribble a {       background-color: #eb1d5d; }
+    }
+
+}
+
+

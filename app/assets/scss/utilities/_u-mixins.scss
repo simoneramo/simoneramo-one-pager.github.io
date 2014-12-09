@@ -13,6 +13,7 @@ $use-utilities-mixins:  true !default;
   @include add(u-vertical-align-table)         { @include vertical-align-table; }
   @include add(u-unstyled)         			 			 { @include unstyled; }
   @include add(u-margin-bottom)                { @include global-mb; }
+  @include add(u-visually-hidden)              { @include visually-hidden; }
 
   // // mixin
   // @include add(u-m-hid)          { @include hidden; }

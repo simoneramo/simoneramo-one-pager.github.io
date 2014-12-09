@@ -28,76 +28,77 @@
   $use-base-links:                        true;
   $use-base-text:                         true;
   $use-base-lists:                        true;
-  $use-base-quotes:                       true;
+  $use-base-quotes:                       false;
   $use-base-media:                        true;
-  $use-base-code:                         true; 
-  $use-base-forms:                        true; 
+  $use-base-code:                         false; 
+  $use-base-forms:                        false; 
 
 
   // utilities
-  $use-utilities-island:                  true;
-  $use-utilities-widths:                  true;
+  $use-utilities-island:                  false;
+  $use-utilities-widths:                  false;
   $use-utilities-extends:                 true;
   $use-utilities-spaces:                  true;
   $use-utilities-display:                 true;
-  $use-utilities-print:                   true;
+  $use-utilities-print:                   false;
   $use-utilities-text:                    true;
   $use-utilities-fonts:                   true;
   $use-utilities-mixins:                  true;  
-  $use-utilities-overflow:                true;
-  $use-utilities-floats:                  true;  
-  $use-utilities-position:                true;  
+  $use-utilities-overflow:                false;
+  $use-utilities-floats:                  false;  
+  $use-utilities-position:                false;  
   $use-utilities-rounded:                 true;   
-  $use-utilities-states:                  true;  
-  $use-utilities-vertical-align:          true; 
-  $use-utilities-white-space:             true;
-
+  $use-utilities-states:                  false;  
+  $use-utilities-vertical-align:          false; 
+  $use-utilities-white-space:             false;
+  $use-utilities-colours:                 false;
 
   // objects
-  $use-objects-code:                      true;
-  $use-objects-forms:                     true;
+  $use-objects-code:                      false;
+  $use-objects-forms:                     false;
   $use-objects-images:                    true;
-  $use-objects-rules:                     true;
-  $use-objects-tables:                    true;
-  $use-objects-island:                    true;
-  $use-objects-blockquote:                true;
-  $use-objects-notify:                    true;
-  $use-objects-labels:                    true;
-  $use-objects-buttons:                   true;
-  $use-objects-buttons-groups:            true;
-  $use-objects-columns:                   true;
-  $use-objects-icon-fonts:                true;
-  $use-objects-icon-text:                 true;
-  $use-objects-link-complex:              true;
-  $use-objects-lists:                     true;
-  $use-objects-sprite:                    true;
-  $use-objects-block-list:                true;
-  $use-objects-thumbnail:                 true;
-  $use-objects-breadcrumb:                true;
-  $use-objects-flyout:                    true;
-  $use-objects-matrix:                    true;
-  $use-objects-media:                     true;
-  $use-objects-hamburger:                 true;
-  $use-objects-nav:                       true;
-  $use-objects-options:                   true;
-  $use-objects-pagination:                true;
-  $use-objects-progress-bars:             true;
-  $use-objects-site-map:                  true;
-  $use-objects-split:                     true;
-  $use-objects-loaders:                   true;
-  $use-objects-stats:                     true;
-  $use-objects-this-or-this:              true;  
+  $use-objects-rules:                     false;
+  $use-objects-tables:                    false;
+  $use-objects-island:                    false;
+  $use-objects-blockquote:                false;
+  $use-objects-notify:                    false;
+  $use-objects-labels:                    false;
+  $use-objects-buttons:                   false;
+  $use-objects-buttons-groups:            false;
+  $use-objects-columns:                   false;
+  $use-objects-icon-fonts:                false;
+  $use-objects-icon-text:                 false;
+  $use-objects-link-complex:              false;
+  $use-objects-lists:                     false;
+  $use-objects-sprite:                    false;
+  $use-objects-block-list:                false;
+  $use-objects-thumbnail:                 false;
+  $use-objects-breadcrumb:                false;
+  $use-objects-flyout:                    false;
+  $use-objects-matrix:                    false;
+  $use-objects-media:                     false;
+  $use-objects-hamburger:                 false;
+  $use-objects-nav:                       false;
+  $use-objects-options:                   false;
+  $use-objects-pagination:                false;
+  $use-objects-progress-bars:             false;
+  $use-objects-site-map:                  false;
+  $use-objects-split:                     false;
+  $use-objects-loaders:                   false;
+  $use-objects-stats:                     false;
+  $use-objects-this-or-this:              false;  
   $use-objects-flag:                      true;  
-  
+  $use-objects-figure:                    false;
+  $use-objects-tabs:                      false;
 
   // delete or add icons folder
-  $use-icons-feather:                     true;
-  $use-icons-octicons:                    true;
+  $use-icons-feather:                     false;
+  $use-icons-octicons:                    false;
 
 
   // modules
   $use-modules-social-gallery:            true;
-  $use-modules-owl-carousel:              true;
-  $use-modules-fit-text:                  true;
-  $use-modules-fit-vids:                  true;
-  $use-modules-fluid-box:                 true;
+  $use-modules-owl-carousel:              false;
+  $use-modules-fit-text:                  false;
+  $use-modules-fit-vids:                  false;
+  $use-modules-fluid-box:                 false;

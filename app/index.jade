@@ -2,25 +2,47 @@ doctype html
 html(lang='en')
   head
     meta(charset="UTF-8")
-    title Simon Eramo
+    title Simon Eramo - Designer & 38 Front End Developer
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1') 
 
-    include _partials/site/metaquery
-
-    include _partials/site/icon-chrome-android
+    //- include _partials/site/icon-chrome-android
     
-    include _partials/site/icon-safari-ios
+    //- include _partials/site/icon-safari-ios
     
-    include _partials/site/icon-tile-win8
+    //- include _partials/site/icon-tile-win8
 
-    include _partials/site/if-mobile-url
+    //- include _partials/site/if-mobile-url
       
     link(type='text/css', rel='stylesheet', href='../assets/css/main.css')
-  body.styleguide
+  body
 
-    div.l-styleguide-container.container
+    .l-container
+      .l-container__inner.o-flag
+        .o-flag__body
+          a(class='+u-inline-block' href='https://www.linkedin.com/in/simoneramo' alt='image simon eramo' title='i hate linkedin')
+            img(class='o-img  --center  --circle  +u-mb-2  s-logo' src='../assets/images/site/simoneramo.png')
+          h1 Designer &#38 Front End Developer form Melbourne Australia
+          ul(class='+u-unstyled  o-social-gallery')
+            li.o-social-gallery__item.twitter
+              a(class='+u-round' href='https://twitter.com/simoneramo')
+                img(src="../assets/icons/social/twitter.svg", alt="Joomla SVG Icon")
+                span(class='+u-visually-hidden') link to twitter
+            li.o-social-gallery__item.gimmebar
+              a(class='+u-round' href='https://gimmebar.com/loves/simoneramo')
+                img(src="../assets/icons/social/gimmebar.svg", alt="Blogger SVG Icon")
+                span(class='+u-visually-hidden') link to gimmiebar
+            li.o-social-gallery__item.github
+              a(class='+u-round' href='https://github.com/simoneramo')
+                img(src="../assets/icons/social/github.svg", alt="Tumblr SVG Logo Icon")
+                span(class='+u-visually-hidden') link to github
+            li.o-social-gallery__item.instagram
+              a(class='+u-round' href='http://instagram.com/simon_eramo')
+                img(src="../assets/icons/social/instagram.svg", alt="Wordpress SVG Icon")
+                span(class='+u-visually-hidden') link to instagram
+            li.o-social-gallery__item.dribble
+              a(class='+u-round' href='https://dribbble.com/simoneramo')
+                img(src="../assets/icons/social/dribble.svg", alt="Squarespace SVG Icon")
+                span(class='+u-visually-hidden') link to dribble
 
-
-    include _partials/site/scripts
     include _partials/site/analytics
