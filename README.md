@@ -1,3 +1,4 @@
-# Core App
+# Simon Eramo
+----
 
-The main files of your application
+Personal one pager built on Core Alpha
