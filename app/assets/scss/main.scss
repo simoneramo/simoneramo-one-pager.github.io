@@ -34,6 +34,10 @@
 @import "base/**/*";
 
 
+// utilities
+@import "utilities/**/*";
+
+
 // objects
 @import "objects/**/*";
 
@@ -51,11 +55,7 @@
 
 
 // styleguide
-@import "styleguide/**/*";
-
-
-// utilities
-@import "utilities/**/*";
+// @import "styleguide/**/*";
 
 
 // debug
