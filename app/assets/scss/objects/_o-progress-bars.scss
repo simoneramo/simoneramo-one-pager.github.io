@@ -8,14 +8,16 @@ $use-objects-progress-bars: true !default;
   // object
   @include object(o-progress) {
     height: $space-3;
-    background-color: $bgc-btn-1;
-    @include global-mb;
+    background-color: $c-object;
+    @if $use-global-mb == true{
+      @include mb;
+    }
 
     // element    
     @include element(bar){
       height: 100%;
       text-align: center;
-      background-color: shade($bgc-btn-1,10%);
+      background-color: shade($c-object,10%);
       display: table;
       &[aria-valuenow="0"]{
         background-color: rgba(0, 0, 0, 0);

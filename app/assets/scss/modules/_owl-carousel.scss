@@ -2,20 +2,16 @@ $use-modules-owl-carousel:	true !default;
 
 @if $use-modules-owl-carousel == true{
 /* ==========================================================================
-   Modules - Owl Carousel
+   Modules - Owl Carousel v1.3.3 - https://github.com/OwlFonk/OwlCarousel
    ========================================================================== */
 
-	/* 
-	 * 	Core Owl Carousel CSS File
-	 *	v1.3.3
-	 */
-
 	.m-owl-carousel{
-			display: none;
-			position: relative;
-			width: 100%;
-			-ms-touch-action: pan-y;
-		 .owl-wrapper:after {
+		display: none;
+		position: relative;
+		width: 100%;
+		-ms-touch-action: pan-y;
+		
+	 .owl-wrapper:after {
 			content: ".";
 			display: block;
 			clear: both;
@@ -29,21 +25,23 @@ $use-modules-owl-carousel:	true !default;
 			position: relative;
 			-webkit-transform: translate3d(0px, 0px, 0px);
 		}
+
 		.owl-wrapper-outer{
 			overflow: hidden;
 			position: relative;
 			width: 100%;
 		}
+
 		.owl-wrapper-outer.autoHeight{
 			transition: height 500ms ease-in-out;
 		}
-			
+		
 		.owl-item{
 			float: left;
 		}
 	}
 
-
+	// controls
 	.owl-controls{
 		user-select: none;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
@@ -51,7 +49,6 @@ $use-modules-owl-carousel:	true !default;
 		cursor: pointer;
 		}
 	}
-
 
 
 	/* fix */
@@ -77,18 +74,14 @@ $use-modules-owl-carousel:	true !default;
 
 
 
-	/* mouse grab icon */
+	// mouse grab icon
 	.grabbing { 
-	    cursor: url(assets/img/sink/grabbing.png) 8 8, move;
+	    cursor: url(../assets/images/modules/grabbing.png) 8 8, move;
 	    cursor: -webkit-grabbing;
 	}
 
 
-
-
-	/*
-	* Owl Carousel Owl Styles 
-	*/
+	// Owl Carousel Owl Styles 
 	.m-owl-theme{
 
 		.owl-controls{
@@ -97,7 +90,7 @@ $use-modules-owl-carousel:	true !default;
 			
 			// Styling Next and Prev buttons
 			.owl-buttons div{
-				// @extend %o-btn;
+				@extend .o-btn;
 			}
 
 			.owl-page{
@@ -105,54 +98,52 @@ $use-modules-owl-carousel:	true !default;
 				zoom: 1;
 				
 				@if $legacy_browser_support {
-				*display: inline;/*IE7 life-saver */
+					*display: inline;/*IE7 life-saver */
 				}
 				
-				 	span{
-						display: block;
-						width: $space-half;
-						height: $space-half;
-						margin: $space-half;
-						
-						@if $legacy_browser_support {
-						filter: Alpha(Opacity=50);/*IE7 fix*/
-						}
-						
-						opacity: 0.5;
-						border-radius: 100%;
-						background: $bgc-btn-1;
-						
-						&.owl-numbers{
-							height: auto;
-							width: auto;
-							color: #FFF;
-							padding: 2px 10px;
-							font-size: 12px;
-							border-radius: 30px;
-						}
+			 	span{
+					display: block;
+					width: $space-half;
+					height: $space-half;
+					margin: $space-half;
+					
+					@if $legacy_browser_support {
+					filter: Alpha(Opacity=50);/*IE7 fix*/
 					}
+					
+					opacity: 0.5;
+					border-radius: 100%;
+					background: $bc-btn-1;
+					
+					&.owl-numbers{
+						height: auto;
+						width: auto;
+						color: #FFF;
+						padding: 2px 10px;
+						font-size: 12px;
+						border-radius: 30px;
+					}
+				}
 
 			}
 		}
 
 		.owl-page.active span,
 		&.clickable .owl-page:hover span{
-
+			opacity: 1;
 			@if $legacy_browser_support {
 			filter: Alpha(Opacity=100);/*IE7 fix*/
 			}
-
-			opacity: 1;
 		}
 
 	}
 
 
 
-	/* preloading images */
+	// preloading images
 	.owl-item.loading{
 		min-height: 150px;
-		background: url(AjaxLoader.gif) no-repeat center center
+		background: url(../assets/images/modules/ajax-loader.gif) no-repeat center center
 	}
 
 }// end if

@@ -10,10 +10,10 @@ $use-objects-rules: true !default;
     border: none;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    color: $silver;
+    color: $c-object;
     
     @if $use-global-mb == true{
-      @include global-mb;
+      @include mb;
     }
 
     // modifier

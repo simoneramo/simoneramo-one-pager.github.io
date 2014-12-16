@@ -6,16 +6,13 @@ $use-base-text: true !default;
    ========================================================================== */
    
   @include headings(1, 6) {
-    font-family: $f-base-heading-family;
+    font-family: $ff-heading-base;
     color: $c-heading-1;
-    @if $use-global-mb == true{
-      @include global-mb;
-    }
   }
 
   p{
     @if $use-global-mb == true{
-      @include global-mb;
+      @include mb;
     }
   }
 
@@ -26,12 +23,12 @@ $use-base-text: true !default;
 
   // make $f-small
   small{
-    font-size: $f-small;
+    font-size: $fs-h7;
   }
 
   // set default space
-  sup{ top: -$space-quarter; }
-  sub{ bottom: -$space-quarter; }
+  sup{ top: -$space-4th; }
+  sub{ bottom: -$space-4th; }
 
   // Apply underlines to inserted
   // remove underlines from potentially troublesome elements

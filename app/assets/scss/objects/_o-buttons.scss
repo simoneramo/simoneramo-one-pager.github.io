@@ -11,7 +11,7 @@ $use-objects-buttons: true !default;
     margin:0;                              
     padding: 0 $space;             
     border:none;                      
-    background: $bgc-btn-1;       
+    background: $c-object;       
     vertical-align:middle;      
     white-space:nowrap;        
     font-size:100%;         
@@ -59,22 +59,26 @@ $use-objects-buttons: true !default;
 
     // modifier
     @include modifier(positive) {
-      @extend %e-bgc-success;
+      @extend %e-bc-success;
     }
 
     // modifier
     @include modifier(negative) {
-      @extend %e-bgc-error;
+      @extend %e-bc-error;
     }
 
     // modifier
-    @include modifier(round) {
+    @include modifier(pill) {
       border-radius: 200px;     
+    }
+
+    @include modifier(rounded) {
+     border-radius: $button-round;    
     }
 
     // modifier
     @include modifier(inactive) {
-      @extend %e-disable;
+      @extend %e-s-disable;
     }
   
   }

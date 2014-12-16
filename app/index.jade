@@ -2,9 +2,12 @@ doctype html
 html(lang='en')
   head
     meta(charset="UTF-8")
+    include _partials/site/compatibility-mode
     title Simon Eramo - Designer & Front End Developer
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1') 
+
+    //- include _partials/site/metaquery
 
     //- include _partials/site/icon-chrome-android
     
@@ -14,35 +17,42 @@ html(lang='en')
 
     //- include _partials/site/if-mobile-url
       
-    link(type='text/css', rel='stylesheet', href='../assets/css/main.css')
+    link(type='text/css', rel='stylesheet', href='assets/css/main.css')
+
   body
 
     .l-container
       .l-container__inner.o-flag
         .o-flag__body
           a(class='+u-inline-block' href='https://www.linkedin.com/in/simoneramo' alt='image simon eramo' title='i hate linkedin')
-            img(class='o-img  --center  --circle  +u-mb-2  s-logo' src='../assets/images/site/simoneramo.png')
+            img(class='o-img  --center  --circle  +u-s-mb-2  s-logo' src='../assets/images/site/simoneramo.png')
           h1 Designer & Front End Developer from Melbourne Australia
           ul(class='+u-unstyled  m-social-gallery')
-            li.o-social-gallery__item.twitter
-              a(class='+u-r-circle' href='https://twitter.com/simoneramo')
-                img(src="../assets/images/social/twitter.svg", alt="Joomla SVG Icon")
+            li.m-social-gallery__item
+              a(class='+u-r-circle  +u-bc-twitter' href='https://twitter.com/simoneramo')
+                img(src="../assets/images/social/twitter.svg", alt="twitter icon")
                 span(class='+u-visually-hidden') link to twitter
-            li.o-social-gallery__item.gimmebar
-              a(class='+u-r-circle' href='https://gimmebar.com/loves/simoneramo')
-                img(src="../assets/images/social/gimmebar.svg", alt="Blogger SVG Icon")
+            li.m-social-gallery__item
+              a(class='+u-r-circle  +u-bc-gimmebar' href='https://gimmebar.com/loves/simoneramo')
+                img(src="../assets/images/social/gimmebar.svg", alt="gGimmebar Icon")
                 span(class='+u-visually-hidden') link to gimmiebar
-            li.o-social-gallery__item.github
-              a(class='+u-r-circle' href='https://github.com/simoneramo')
-                img(src="../assets/images/social/github.svg", alt="Tumblr SVG Logo Icon")
+            li.m-social-gallery__item
+              a(class='+u-r-circle  +u-bc-github' href='https://github.com/simoneramo')
+                img(src="../assets/images/social/github.svg", alt="Github Icon")
                 span(class='+u-visually-hidden') link to github
-            li.o-social-gallery__item.instagram
-              a(class='+u-r-circle' href='http://instagram.com/simon_eramo')
-                img(src="../assets/images/social/instagram.svg", alt="Wordpress SVG Icon")
+            li.m-social-gallery__item
+              a(class='+u-r-circle  +u-bc-instagram' href='http://instagram.com/simon_eramo')
+                img(src="../assets/images/social/instagram.svg", alt="Instagram Icon")
                 span(class='+u-visually-hidden') link to instagram
-            li.o-social-gallery__item.dribble
-              a(class='+u-r-circle' href='https://dribbble.com/simoneramo')
-                img(src="../assets/images/social/dribble.svg", alt="Squarespace SVG Icon")
+            li.m-social-gallery__item
+              a(class='+u-r-circle  +u-bc-dribble' href='https://dribbble.com/simoneramo')
+                img(src="../assets/images/social/dribble.svg", alt="Dribble Icon")
                 span(class='+u-visually-hidden') link to dribble
+
+    
+    //- script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    //- script.
+    //-   window.jQuery || document.write('<script src=""><\\/script>')
+    //- script(src='assets/scripts/scripts.min.js')
 
     include _partials/site/analytics

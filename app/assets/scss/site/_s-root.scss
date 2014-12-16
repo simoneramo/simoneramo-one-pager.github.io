@@ -2,68 +2,71 @@
    Site Root
    ========================================================================== */
    
-  
-  html{
-    border: 10px solid #979fa3;  
-  }
-
-  body{
-    padding-top: $space-2;
-  }
 
   html, body{
     height: 100%;
   }
 
+  // site container
   .l-container {
-    @include center-content;
+    @include cc;
     max-width: 50em;
     text-align: center;
     height: 100%;  
-    
+    margin-top: $space-2;
+    @include breakpoint($bp-medium) {
+      margin-top: 0;
+    }
     &__inner{
       height: 100%;
       img{
-        width:200px;
+        width: 140px;
+        @include breakpoint($bp-medium) {
+          width: 200px;
+        }
       }
       h1{
-        padding-left: 20%;
-        padding-right: 20%;
-        font-size: $f-h2;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: $fs-h2;
         font-weight: 400;
-        text-transform: uppercase;
         font-family: 'source sans pro';
-        color: #cbcbcb;
+        color: #cbcbcb;        
+        @include breakpoint($bp-medium) {
+          padding-left: 20%;
+          padding-right: 20%;
+        }
       }
     }
   }
 
-  .s-logo{
-    border: 3px solid #e0e0e0
-  }
 
-
-  .o-social-gallery{
-    margin-top: $space-4;
+  // social gallery
+  .m-social-gallery{    
+    margin-top: $space-2;
+    padding-bottom:  $space-2;
+    @include breakpoint($bp-medium) {
+      margin-top: $space-4;
+    }
     &__item{    
       display:inline-block;
-      width: 10%;
+      width: 20%;
       margin: 2.5%;
+      @include breakpoint($bp-medium) {
+        width: 10%;
+      }
       a{
+        padding: 27%;
+        @include breakpoint($bp-medium) {
+          padding: 25%;
+        }
         transition: all 0.1s;
         &:hover{
           transform: scale(1.25);
           transition: all 0.08s;
-          background-color: red;
         }
       }
-      &.instagram a {     background-color: #ecac24; }
-      &.gimmebar a {      background-color: #f06d54; }
-      &.twitter a {       background-color: #03a7ff; }
-      &.github a {        background-color: #1ba54c; }
-      &.dribble a {       background-color: #eb1d5d; }
     }
-
 }
 
 

@@ -51,7 +51,7 @@
   $use-utilities-states:                  false;  
   $use-utilities-vertical-align:          false; 
   $use-utilities-white-space:             false;
-  $use-utilities-colours:                 false;
+  $use-utilities-colours:                 true;
 
   // objects
   $use-objects-code:                      false;
@@ -91,7 +91,8 @@
   $use-objects-figure:                    false;
   $use-objects-tabs:                      false;
 
-  // delete or add icons folder
+
+  // icons
   $use-icons-feather:                     false;
   $use-icons-octicons:                    false;
 
