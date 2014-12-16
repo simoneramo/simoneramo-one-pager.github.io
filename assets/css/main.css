@@ -489,101 +489,12 @@ hr, figure {
 
    ========================================================================== */
 @font-face {
-  font-family: "feather";
-  src: url("../../assets/fonts/feather/feather.eot");
-  src: url("../../assets/fonts/feather/feather.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/feather/feather.ttf") format("truetype"), url("../../assets/fonts/feather/feather.woff") format("woff"), url("../../assets/fonts/feather/feather.svg#feather") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: "octicons";
-  src: url("../../assets/fonts/octicons/octicons.eot");
-  src: url("../../assets/fonts/octicons/octicons.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/octicons/octicons.ttf") format("truetype"), url("../../assets/fonts/octicons/octicons.woff") format("woff"), url("../../assets/fonts/octicons/octicons.svg#octicons") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 200;
-  font-style: normal;
-  font-stretch: normal;
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.eot");
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.svg#source_sans_proextralight") format("svg"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 200;
-  font-style: italic;
-  font-stretch: normal;
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.eot");
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.svg#source_sans_proXLtIt") format("svg"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.eot");
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.svg#source_sans_prolight") format("svg"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 300;
-  font-style: italic;
-  font-stretch: normal;
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.eot");
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.svg#source_sans_prolight_italic") format("svg"); }
-@font-face {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.eot");
   src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.svg#source_sans_proregular") format("svg"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 400;
-  font-style: italic;
-  font-stretch: normal;
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-It.eot");
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-It.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-It.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-It.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-It.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-It.svg#source_sans_proitalic") format("svg"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.eot");
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.svg#source_sans_prosemibold") format("svg"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 600;
-  font-style: italic;
-  font-stretch: normal;
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt");
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt.svg#source_sans_proSBdIt") format("svg"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 700;
-  font-style: normal;
-  font-stretch: normal;
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.eot");
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.svg#source_sans_probold") format("svg"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 700;
-  font-style: italic;
-  font-stretch: normal;
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.eot");
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.svg#source_sans_probold_italic") format("svg"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 900;
-  font-style: normal;
-  font-stretch: normal;
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.eot");
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.otf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.svg#source_sans_problack") format("svg"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 900;
-  font-style: italic;
-  font-stretch: normal;
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.eot");
-  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.svg#source_sans_problack_italic") format("svg"); }
 /* ==========================================================================
    Base - Links
    ========================================================================== */
@@ -708,134 +619,6 @@ abbr[title],
 dfn[title] {
   cursor: help; }
 
-/* ==========================================================================
-   Object - Flag
-   ========================================================================== */
-.o-flag {
-  display: table; }
-  .o-flag__body {
-    display: table-cell;
-    vertical-align: middle; }
-  .o-flag__image {
-    padding-right: 2em;
-    display: table-cell;
-    vertical-align: middle; }
-    .o-flag__image > img {
-      display: block;
-      max-width: none; }
-  .o-flag.\--rev .o-flag__image {
-    padding-right: 0;
-    padding-left: 2em; }
-
-/* ==========================================================================
-   Object - Images / Figure
-   ========================================================================== */
-.o-img.\--circle {
-  border-radius: 50%; }
-.o-img.\--right {
-  float: right; }
-.o-img.\--left {
-  float: left; }
-.o-img.\--center {
-  margin-right: auto;
-  margin-left: auto; }
-.o-img.\--full {
-  width: 100%; }
-
-/*make inline list li have bullets with inline:block; */
-/*maybe working on this work on this?
-	http://stackoverflow.com/questions/34399/show-unordered-list-inline-but-keep-the-bullets
-*/
-/* ==========================================================================
-   Modules CSS Social Gallery - 1.0
-   ========================================================================== */
-.m-social-gallery__item {
-  width: 12.5%;
-  vertical-align: bottom; }
-  .m-social-gallery__item a {
-    display: block;
-    padding: 25%; }
-    .m-social-gallery__item a img {
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-      vertical-align: middle; }
-
-/* ==========================================================================
-   Site Custom Adds
-   
-   example:
-
-    @include add(add-site-border) { 
-      border-bottom: 2px solid red;
-    }
-
-    .+add-site-border
-
-   ========================================================================== */
-/* ==========================================================================
-   Site Root
-   ========================================================================== */
-html, body {
-  height: 100%; }
-
-.l-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50em;
-  text-align: center;
-  height: 100%;
-  margin-top: 2em; }
-  @media (min-width: 38.75em) {
-    .l-container {
-      margin-top: 0; } }
-  .l-container__inner {
-    height: 100%; }
-    .l-container__inner img {
-      width: 140px; }
-      @media (min-width: 38.75em) {
-        .l-container__inner img {
-          width: 200px; } }
-    .l-container__inner h1 {
-      padding-left: 10%;
-      padding-right: 10%;
-      font-size: 1.625em;
-      font-weight: 400;
-      font-family: 'source sans pro';
-      color: #cbcbcb; }
-      @media (min-width: 38.75em) {
-        .l-container__inner h1 {
-          padding-left: 20%;
-          padding-right: 20%; } }
-
-.m-social-gallery {
-  margin-top: 2em;
-  padding-bottom: 2em; }
-  @media (min-width: 38.75em) {
-    .m-social-gallery {
-      margin-top: 4em; } }
-  .m-social-gallery__item {
-    display: inline-block;
-    width: 20%;
-    margin: 2.5%; }
-    @media (min-width: 38.75em) {
-      .m-social-gallery__item {
-        width: 10%; } }
-    .m-social-gallery__item a {
-      padding: 27%;
-      -webkit-transition: all 0.1s;
-              transition: all 0.1s; }
-      @media (min-width: 38.75em) {
-        .m-social-gallery__item a {
-          padding: 25%; } }
-      .m-social-gallery__item a:hover {
-        -webkit-transform: scale(1.25);
-            -ms-transform: scale(1.25);
-                transform: scale(1.25);
-        -webkit-transition: all 0.08s;
-                transition: all 0.08s; }
-
-/* No files to import found in styleguide/**\/* */
 /* ==========================================================================
    Utilities - Colours
    ========================================================================== */
@@ -2041,3 +1824,135 @@ html, body {
 
 .\+u-ta-justify {
   text-align: justify; }
+
+/* ==========================================================================
+   Object - Flag
+   ========================================================================== */
+.o-flag {
+  display: table; }
+  .o-flag__body {
+    display: table-cell;
+    vertical-align: middle; }
+  .o-flag__image {
+    padding-right: 2em;
+    display: table-cell;
+    vertical-align: middle; }
+    .o-flag__image > img {
+      display: block;
+      max-width: none; }
+  .o-flag.\--rev .o-flag__image {
+    padding-right: 0;
+    padding-left: 2em; }
+
+/* ==========================================================================
+   Object - Images / Figure
+   ========================================================================== */
+.o-img.\--circle {
+  border-radius: 50%; }
+.o-img.\--right {
+  float: right; }
+.o-img.\--left {
+  float: left; }
+.o-img.\--center {
+  margin-right: auto;
+  margin-left: auto; }
+.o-img.\--full {
+  width: 100%; }
+
+/*make inline list li have bullets with inline:block; */
+/*maybe working on this work on this?
+	http://stackoverflow.com/questions/34399/show-unordered-list-inline-but-keep-the-bullets
+*/
+/* ==========================================================================
+   Modules CSS Social Gallery - 1.0
+   ========================================================================== */
+.m-social-gallery__item {
+  width: 12.5%;
+  vertical-align: bottom; }
+  .m-social-gallery__item a {
+    display: block;
+    padding: 25%; }
+    .m-social-gallery__item a img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      vertical-align: middle; }
+
+/* ==========================================================================
+   Site Custom Adds
+   
+   example:
+
+    @include add(add-site-border) { 
+      border-bottom: 2px solid red;
+    }
+
+    .+add-site-border
+
+   ========================================================================== */
+/* ==========================================================================
+   Site Root
+   ========================================================================== */
+html, body {
+  height: 100%; }
+
+.l-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50em;
+  text-align: center;
+  height: 100%;
+  margin-top: 2em; }
+  @media (min-width: 38.75em) {
+    .l-container {
+      margin-top: 0; } }
+  .l-container__inner {
+    height: 100%; }
+    .l-container__inner img {
+      width: 140px; }
+      @media (min-width: 38.75em) {
+        .l-container__inner img {
+          width: 200px; } }
+    .l-container__inner h1 {
+      padding-left: 10%;
+      padding-right: 10%;
+      font-size: 1.625em;
+      font-weight: 400;
+      font-family: 'source sans pro';
+      color: #cbcbcb; }
+      @media (min-width: 38.75em) {
+        .l-container__inner h1 {
+          padding-left: 20%;
+          padding-right: 20%; } }
+
+.m-social-gallery {
+  margin-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em; }
+  @media (min-width: 38.75em) {
+    .m-social-gallery {
+      margin-top: 4em;
+      padding-left: 0;
+      padding-right: 0; } }
+  .m-social-gallery__item {
+    display: inline-block;
+    width: 20%;
+    margin: 4.5%; }
+    @media (min-width: 38.75em) {
+      .m-social-gallery__item {
+        width: 10%;
+        margin: 2.5%; } }
+    .m-social-gallery__item a {
+      padding: 27%;
+      -webkit-transition: all 0.1s;
+              transition: all 0.1s; }
+      @media (min-width: 38.75em) {
+        .m-social-gallery__item a {
+          padding: 25%; } }
+      .m-social-gallery__item a:hover {
+        -webkit-transform: scale(1.25);
+            -ms-transform: scale(1.25);
+                transform: scale(1.25);
+        -webkit-transition: all 0.08s;
+                transition: all 0.08s; }
