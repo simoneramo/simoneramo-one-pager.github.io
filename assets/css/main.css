@@ -11,22 +11,85 @@
    Global Variables
    ========================================================================== */
 /* ==========================================================================
-   Config - Media Queries 
-   ========================================================================== */
+  Config - Media Queries
+
+  Default BREAKPOINT variables for reference:
+
+  $breakpoint-default-feature:    'min-width'     !default;
+  $breakpoint-default-media:      'all'           !default;
+  $breakpoint-force-media-all:    false           !default;
+  $breakpoint-default-pair:       'width'         !default;
+  $breakpoint-to-ems:             false           !default;
+  $breakpoint-prefixes:           'webkit' 'moz'  !default;
+  $breakpoint-prefixed-queries:   'device-pixel-ratio' 
+                                  'min-device-pixel-ratio' 
+                                  'max-device-pixel-ratio' !default;
+  $breakpoint-no-queries:         false           !default;
+  $breakpoint-no-query-wrappers:  false           !default;
+  
+  ==========================================================================*/
 /* ==========================================================================
    Config - Colours
+  
+    1. custom
+    2. backgrounds
+    3. selection
+    4. links
+    5. headings
+    6. type
+    8. objects
+     8.1 buttons
+     8.2 hamburger
+     8.3 notify
+     8.4 form
+     8.5 code
+    8. form
+    9. code
+    10. links
+    11. brands
+
    ========================================================================== */
 /* ==========================================================================
    Config - Type
    ========================================================================== */
 /* ==========================================================================
    Config - Layout
-   ========================================================================== */
-/* ==========================================================================
-   Config - Margins
+
+   Default SUSY settings for reference:
+
+   $susy: (
+    flow: ltr,
+    math: fluid,
+    output: float,
+    gutter-position: after,
+    container: auto,
+    container-position: center,
+    columns: 4,
+    gutters: .25,
+    column-width: false,
+    global-box-sizing: content-box,
+    last-flow: to,
+    debug: (
+      image: hide,
+      color: rgba(#66f, .25),
+      output: background,
+      toggle: top right,
+    ),
+    use-custom: (
+      background-image: true,
+      background-options: false,
+      box-sizing: true,
+      clearfix: false,
+      rem: true,
+    )
+   );
+
    ========================================================================== */
 /* ==========================================================================
    Config - Rounded
+   ========================================================================== */
+/* ==========================================================================
+   Config - Margins
    ========================================================================== */
 /* ==========================================================================
    Normalize.scss settings
@@ -399,7 +462,7 @@ th {
   padding: 0; }
 
 /* ==========================================================================
-   Globals - Reset
+   Globals - Reset // use with base styles
    ========================================================================== */
 body,
 h1, h2, h3, h4, h5, h6,
@@ -418,15 +481,109 @@ hr, figure {
     .woff2') format('woff2'),                              // http://goo.gl/ldoFk2
     .woff') format('woff'),                                // Modern Browsers 
     .ttf') format('truetype'),                             // Safari, Android, iOS
-    .svg#name-of-font') format('svg');                     // Legacy iOS
+    .svgname-of-id-inside-svg-file') format('svg');     // Legacy iOS
+    .otf ??
+    
+    Why the # in .svg# ?
+    - http://goo.gl/6N8p7y
 
    ========================================================================== */
 @font-face {
-  font-family: "source-sans-pro";
-  src: url("../../assets/fonts/source-sans-pro/source-sans-pro-regular.eot");
-  src: url("../../assets/fonts/source-sans-pro/source-sans-pro-regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/source-sans-pro/source-sans-pro-regular.woff2") format("woff2"), url("../../assets/fonts/source-sans-pro/source-sans-pro-regular.woff") format("woff"), url("../../assets/fonts/source-sans-pro/source-sans-pro-regular.ttf") format("truetype"), url("../../assets/fonts/source-sans-pro/source-sans-pro-regular.svg#s{$type-name}") format("svg");
-  font-weight: 400;
+  font-family: "feather";
+  src: url("../../assets/fonts/feather/feather.eot");
+  src: url("../../assets/fonts/feather/feather.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/feather/feather.ttf") format("truetype"), url("../../assets/fonts/feather/feather.woff") format("woff"), url("../../assets/fonts/feather/feather.svg#feather") format("svg");
+  font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: "octicons";
+  src: url("../../assets/fonts/octicons/octicons.eot");
+  src: url("../../assets/fonts/octicons/octicons.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/octicons/octicons.ttf") format("truetype"), url("../../assets/fonts/octicons/octicons.woff") format("woff"), url("../../assets/fonts/octicons/octicons.svg#octicons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.eot");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLight.svg#source_sans_proextralight") format("svg"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 200;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.eot");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-ExtraLightIt.svg#source_sans_proXLtIt") format("svg"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.eot");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.svg#source_sans_prolight") format("svg"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.eot");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-LightIt.svg#source_sans_prolight_italic") format("svg"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.eot");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Regular.svg#source_sans_proregular") format("svg"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-It.eot");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-It.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-It.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-It.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-It.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-It.svg#source_sans_proitalic") format("svg"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.eot");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Semibold.svg#source_sans_prosemibold") format("svg"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-SemiboldIt.svg#source_sans_proSBdIt") format("svg"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.eot");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Bold.svg#source_sans_probold") format("svg"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.eot");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BoldIt.svg#source_sans_probold_italic") format("svg"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.eot");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.otf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.svg#source_sans_problack") format("svg"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.eot");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.otf.woff") format("woff"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.otf") format("opentype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.ttf") format("truetype"), url("../../assets/fonts/SourceSansPro/SourceSansPro-BlackIt.svg#source_sans_problack_italic") format("svg"); }
 /* ==========================================================================
    Base - Links
    ========================================================================== */
@@ -455,17 +612,17 @@ a {
    Base - Lists
    ========================================================================== */
 ul, ol, dl {
-  margin-bottom: 1em; }
-
-ul, ol, dd {
   margin-top: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-bottom: 1em; }
+  ul ul, ul ol, ul dl, ol ul, ol ol, ol dl, dl ul, dl ol, dl dl {
+    margin-bottom: 0; }
+
+li, dt, dd {
+  line-height: 1.6; }
 
 ul, ol {
   padding-left: 1.5em; }
-
-dl {
-  margin-top: 0; }
 
 dd {
   margin-left: 1.5em; }
@@ -526,8 +683,7 @@ body {
    ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  color: #2c2c2c;
-  margin-bottom: 1em; }
+  color: #2c2c2c; }
 
 p {
   margin-bottom: 1em; }
@@ -586,78 +742,24 @@ dfn[title] {
 .o-img.\--full {
   width: 100%; }
 
+/*make inline list li have bullets with inline:block; */
+/*maybe working on this work on this?
+	http://stackoverflow.com/questions/34399/show-unordered-list-inline-but-keep-the-bullets
+*/
 /* ==========================================================================
-   Modules - Social Gallery
+   Modules CSS Social Gallery - 1.0
    ========================================================================== */
-.o-social-gallery__item {
+.m-social-gallery__item {
   width: 12.5%;
   vertical-align: bottom; }
-  .o-social-gallery__item a {
+  .m-social-gallery__item a {
     display: block;
     padding: 25%; }
-    .o-social-gallery__item a img {
+    .m-social-gallery__item a img {
       width: 100%;
       height: 100%;
       max-width: 100%;
       vertical-align: middle; }
-  .o-social-gallery__item.wordpress a {
-    background-color: #07a0ca; }
-  .o-social-gallery__item.tumblr a {
-    background-color: #375474; }
-  .o-social-gallery__item.blogger a {
-    background-color: #f28020; }
-  .o-social-gallery__item.squarespace a {
-    background-color: #333333; }
-  .o-social-gallery__item.joomla a {
-    background-color: #5e5e5e; }
-  .o-social-gallery__item.drupal a {
-    background-color: #0d8bc7; }
-  .o-social-gallery__item.typepad a {
-    background-color: #629841; }
-  .o-social-gallery__item.expression-engine a {
-    background-color: #5c81a5; }
-  .o-social-gallery__item.kirby a {
-    background-color: #ff0400; }
-  .o-social-gallery__item.moveabletype a {
-    background-color: #9cbaca; }
-  .o-social-gallery__item.disqus a {
-    background-color: #2e9fff; }
-  .o-social-gallery__item.html a {
-    background-color: #ed3e35; }
-  .o-social-gallery__item.behance a {
-    background-color: #1478ff; }
-  .o-social-gallery__item.instagram a {
-    background-color: #517fa4; }
-  .o-social-gallery__item.gimmebar a {
-    background-color: #df3d6b; }
-  .o-social-gallery__item.twitter a {
-    background-color: #00aced; }
-  .o-social-gallery__item.dribble a {
-    background-color: #ff3399; }
-  .o-social-gallery__item.github a {
-    background-color: #575757; }
-  .o-social-gallery__item.linkedin a {
-    background-color: #007bb6; }
-  .o-social-gallery__item.google a {
-    background-color: #d34836; }
-  .o-social-gallery__item.youtube a {
-    background-color: #bb0000; }
-  .o-social-gallery__item.vine a {
-    background-color: #00bf8f; }
-  .o-social-gallery__item.kickstarter a {
-    background-color: #7dbe4b; }
-  .o-social-gallery__item.dropbox a {
-    background-color: #007ee6; }
-  .o-social-gallery__item.rss a {
-    background-color: #eb7f38; }
-  .o-social-gallery__item.foursquare a {
-    background-color: #2da0c7; }
-  .o-social-gallery__item.soundcloud a {
-    background-color: #f7a132; }
-  .o-social-gallery__item.facebook a {
-    background-color: #007ee6; }
-  .o-social-gallery__item.codepen a {
-    background-color: #434346; }
 
 /* ==========================================================================
    Site Custom Adds
@@ -674,12 +776,6 @@ dfn[title] {
 /* ==========================================================================
    Site Root
    ========================================================================== */
-html {
-  border: 10px solid #979fa3; }
-
-body {
-  padding-top: 2em; }
-
 html, body {
   height: 100%; }
 
@@ -688,72 +784,593 @@ html, body {
   margin-right: auto;
   max-width: 50em;
   text-align: center;
-  height: 100%; }
+  height: 100%;
+  margin-top: 2em; }
+  @media (min-width: 38.75em) {
+    .l-container {
+      margin-top: 0; } }
   .l-container__inner {
     height: 100%; }
     .l-container__inner img {
-      width: 200px; }
+      width: 140px; }
+      @media (min-width: 38.75em) {
+        .l-container__inner img {
+          width: 200px; } }
     .l-container__inner h1 {
-      padding-left: 20%;
-      padding-right: 20%;
+      padding-left: 10%;
+      padding-right: 10%;
       font-size: 1.625em;
       font-weight: 400;
-      text-transform: uppercase;
       font-family: 'source sans pro';
       color: #cbcbcb; }
+      @media (min-width: 38.75em) {
+        .l-container__inner h1 {
+          padding-left: 20%;
+          padding-right: 20%; } }
 
-.s-logo {
-  border: 3px solid #e0e0e0; }
-
-.o-social-gallery {
-  margin-top: 4em; }
-  .o-social-gallery__item {
+.m-social-gallery {
+  margin-top: 2em;
+  padding-bottom: 2em; }
+  @media (min-width: 38.75em) {
+    .m-social-gallery {
+      margin-top: 4em; } }
+  .m-social-gallery__item {
     display: inline-block;
-    width: 10%;
+    width: 20%;
     margin: 2.5%; }
-    .o-social-gallery__item a {
+    @media (min-width: 38.75em) {
+      .m-social-gallery__item {
+        width: 10%; } }
+    .m-social-gallery__item a {
+      padding: 27%;
       -webkit-transition: all 0.1s;
               transition: all 0.1s; }
-      .o-social-gallery__item a:hover {
+      @media (min-width: 38.75em) {
+        .m-social-gallery__item a {
+          padding: 25%; } }
+      .m-social-gallery__item a:hover {
         -webkit-transform: scale(1.25);
             -ms-transform: scale(1.25);
                 transform: scale(1.25);
         -webkit-transition: all 0.08s;
-                transition: all 0.08s;
-        background-color: red; }
-    .o-social-gallery__item.instagram a {
-      background-color: #ecac24; }
-    .o-social-gallery__item.gimmebar a {
-      background-color: #f06d54; }
-    .o-social-gallery__item.twitter a {
-      background-color: #03a7ff; }
-    .o-social-gallery__item.github a {
-      background-color: #1ba54c; }
-    .o-social-gallery__item.dribble a {
-      background-color: #eb1d5d; }
+                transition: all 0.08s; }
 
+/* No files to import found in styleguide/**\/* */
 /* ==========================================================================
-   Site Styleguide
+   Utilities - Colours
    ========================================================================== */
+.\+u-bc-white {
+  background-color: white; }
+
+.\+u-bc-silver {
+  background-color: silver; }
+
+.\+u-bc-gray {
+  background-color: gray; }
+
+.\+u-bc-black {
+  background-color: black; }
+
+.\+u-bc-red {
+  background-color: red; }
+
+.\+u-bc-maroon {
+  background-color: maroon; }
+
+.\+u-bc-orange {
+  background-color: orange; }
+
+.\+u-bc-yellow {
+  background-color: yellow; }
+
+.\+u-bc-olive {
+  background-color: olive; }
+
+.\+u-bc-lime {
+  background-color: lime; }
+
+.\+u-bc-green {
+  background-color: green; }
+
+.\+u-bc-aqua {
+  background-color: aqua; }
+
+.\+u-bc-teal {
+  background-color: teal; }
+
+.\+u-bc-blue {
+  background-color: blue; }
+
+.\+u-bc-navy {
+  background-color: navy; }
+
+.\+u-bc-fuchsia {
+  background-color: fuchsia; }
+
+.\+u-bc-purple {
+  background-color: purple; }
+
+.\+u-bc-pink {
+  background-color: pink; }
+
+.\+u-c-white {
+  color: white; }
+
+.\+u-c-silver {
+  color: silver; }
+
+.\+u-c-gray {
+  color: gray; }
+
+.\+u-c-black {
+  color: black; }
+
+.\+u-c-red {
+  color: red; }
+
+.\+u-c-maroon {
+  color: maroon; }
+
+.\+u-c-orange {
+  color: orange; }
+
+.\+u-c-yellow {
+  color: yellow; }
+
+.\+u-c-olive {
+  color: olive; }
+
+.\+u-c-lime {
+  color: lime; }
+
+.\+u-c-green {
+  color: green; }
+
+.\+u-c-aqua {
+  color: aqua; }
+
+.\+u-c-teal {
+  color: teal; }
+
+.\+u-c-blue {
+  color: blue; }
+
+.\+u-c-navy {
+  color: navy; }
+
+.\+u-c-fuchsia {
+  color: fuchsia; }
+
+.\+u-c-purple {
+  color: purple; }
+
+.\+u-c-pink {
+  color: pink; }
+
+.\+u-bc-1 {
+  background-color: #ffffff; }
+
+.\+u-bc-2 {
+  background-color: #f3f3f3; }
+
+.\+u-bc-3 {
+  background-color: #ccc; }
+
+.\+u-c-link {
+  color: #2046df; }
+
+.\+u-c-hover {
+  color: #ec1831; }
+
+.\+u-c-active {
+  color: #ff001e; }
+
+.\+u-c-visited {
+  color: #d01fe0; }
+
+.\+u-bc-link {
+  background-color: #2046df; }
+
+.\+u-bc-hover {
+  background-color: #ec1831; }
+
+.\+u-bc-active {
+  background-color: #ff001e; }
+
+.\+u-bc-visited {
+  background-color: #d01fe0; }
+
+.\+u-c-h-1 {
+  color: #2c2c2c; }
+
+.\+u-c-h-2 {
+  color: #424242; }
+
+.\+u-c-h-3 {
+  color: #585858; }
+
+.\+u-c-t-1 {
+  color: #2c2c2c; }
+
+.\+u-c-t-2 {
+  color: #424242; }
+
+.\+u-c-t-3 {
+  color: #585858; }
+
+.\+u-c-btn-1 {
+  color: #222222; }
+
+.\+u-bc-btn-1 {
+  background-color: #bebebe; }
+
+.\+u-c-btn-2 {
+  color: #aeaeae; }
+
+.\+u-bc-btn-2 {
+  background-color: #a6a6a6; }
+
+.\+u-c-code {
+  color: #333333; }
+
+.\+u-bc-code {
+  background-color: #f7f7f7; }
+
+.\+u-c-select {
+  color: #161616; }
+
+.\+u-bc-select {
+  color: rgba(240, 233, 89, 0.9); }
+
+.\+u-c-form-1 {
+  color: #999999; }
+
+.\+u-c-form-2 {
+  color: #777777; }
+
+.\+u-bc-form-input {
+  background-color: #bebebe; }
+
+.\+u-bc-form-hover {
+  background-color: #ec1831; }
+
+.\+u-bc-form-active {
+  background-color: #ff001e; }
+
+.\+u-bc-form-focus {
+  background-color: #d01fe0; }
+
+.\+u-c-google {
+  color: #1194f6; }
+
+.\+u-c-facebook {
+  color: #336699; }
+
+.\+u-c-twitter {
+  color: #00aced; }
+
+.\+u-c-linkedin {
+  color: #0977b5; }
+
+.\+u-c-dribble {
+  color: #ea4c89; }
+
+.\+u-c-instagram {
+  color: #336699; }
+
+.\+u-c-googleplus {
+  color: #c20907; }
+
+.\+u-c-behance {
+  color: #333333; }
+
+.\+u-c-gimmebar {
+  color: #D6156C; }
+
+.\+u-c-github {
+  color: #333333; }
+
+.\+u-c-tumblr {
+  color: #35465d; }
+
+.\+u-c-youtube {
+  color: #e52d27; }
+
+.\+u-c-vine {
+  color: #00bf8f; }
+
+.\+u-c-kickstarter {
+  color: #14e06e; }
+
+.\+u-c-dropbox {
+  color: #007ee5; }
+
+.\+u-c-rss {
+  color: #eb7f38; }
+
+.\+u-c-facebook {
+  color: #336699; }
+
+.\+u-c-codepen {
+  color: #d75e5e; }
+
+.\+u-c-foursquare {
+  color: #f94877; }
+
+.\+u-c-soundcloud {
+  color: #f83c0e; }
+
+.\+u-c-wordpress {
+  color: #464646; }
+
+.\+u-c-tumblr {
+  color: #35465d; }
+
+.\+u-c-blogger {
+  color: #f57d00; }
+
+.\+u-c-squarespace {
+  color: #222222; }
+
+.\+u-c-joomla {
+  color: #5e5e5e; }
+
+.\+u-c-drupal {
+  color: #0077c0; }
+
+.\+u-c-typepad {
+  color: #629841; }
+
+.\+u-c-expression-engine {
+  color: #5c81a5; }
+
+.\+u-c-kirby {
+  color: #ff0400; }
+
+.\+u-c-moveabletype {
+  color: #9cbaca; }
+
+.\+u-c-disqus {
+  color: #2e9fff; }
+
+.\+u-c-html {
+  color: #ed3e35; }
+
+.\+u-c-yahoo {
+  color: #400191; }
+
+.\+u-c-vimeo {
+  color: #04aeec; }
+
+.\+u-c-flickr {
+  color: #f4f4f4; }
+
+.\+u-c-pinterest {
+  color: #cc3333; }
+
+.\+u-c-google-drive {
+  color: #333333; }
+
+.\+u-c-android {
+  color: #a4c639; }
+
+.\+u-c-apple {
+  color: #cccccc; }
+
+.\+u-c-delicious {
+  color: #0B79E5; }
+
+.\+u-c-forrst {
+  color: #5b9a68; }
+
+.\+u-c-paypal {
+  color: #00437f; }
+
+.\+u-c-lastfm {
+  color: #c3000d; }
+
+.\+u-c-skype {
+  color: #009fe3; }
+
+.\+u-c-digg {
+  color: #333333; }
+
+.\+u-c-swarm {
+  color: #ffb000; }
+
+.\+u-c-etsy {
+  color: #ffb000; }
+
+.\+u-bc-google {
+  background-color: #1194f6; }
+
+.\+u-bc-facebook {
+  background-color: #336699; }
+
+.\+u-bc-twitter {
+  background-color: #00aced; }
+
+.\+u-bc-linkedin {
+  background-color: #0977b5; }
+
+.\+u-bc-dribble {
+  background-color: #ea4c89; }
+
+.\+u-bc-instagram {
+  background-color: #336699; }
+
+.\+u-bc-googleplus {
+  background-color: #c20907; }
+
+.\+u-bc-behance {
+  background-color: #333333; }
+
+.\+u-bc-gimmebar {
+  background-color: #D6156C; }
+
+.\+u-bc-github {
+  background-color: #333333; }
+
+.\+u-bc-tumblr {
+  background-color: #35465d; }
+
+.\+u-bc-youtube {
+  background-color: #e52d27; }
+
+.\+u-bc-vine {
+  background-color: #00bf8f; }
+
+.\+u-bc-kickstarter {
+  background-color: #14e06e; }
+
+.\+u-bc-dropbox {
+  background-color: #007ee5; }
+
+.\+u-bc-rss {
+  background-color: #eb7f38; }
+
+.\+u-bc-facebook {
+  background-color: #336699; }
+
+.\+u-bc-codepen {
+  background-color: #d75e5e; }
+
+.\+u-bc-foursquare {
+  background-color: #f94877; }
+
+.\+u-bc-soundcloud {
+  background-color: #f83c0e; }
+
+.\+u-bc-wordpress {
+  background-color: #464646; }
+
+.\+u-bc-tumblr {
+  background-color: #35465d; }
+
+.\+u-bc-blogger {
+  background-color: #f57d00; }
+
+.\+u-bc-squarespace {
+  background-color: #222222; }
+
+.\+u-bc-joomla {
+  background-color: #5e5e5e; }
+
+.\+u-bc-drupal {
+  background-color: #0077c0; }
+
+.\+u-bc-typepad {
+  background-color: #629841; }
+
+.\+u-bc-expression-engine {
+  background-color: #5c81a5; }
+
+.\+u-bc-kirby {
+  background-color: #ff0400; }
+
+.\+u-bc-moveabletype {
+  background-color: #9cbaca; }
+
+.\+u-bc-disqus {
+  background-color: #2e9fff; }
+
+.\+u-bc-html {
+  background-color: #ed3e35; }
+
+.\+u-bc-yahoo {
+  background-color: #400191; }
+
+.\+u-bc-vimeo {
+  background-color: #04aeec; }
+
+.\+u-bc-flickr {
+  background-color: #f4f4f4; }
+
+.\+u-bc-pinterest {
+  background-color: #cc3333; }
+
+.\+u-bc-google-drive {
+  background-color: #333333; }
+
+.\+u-bc-android {
+  background-color: #a4c639; }
+
+.\+u-bc-apple {
+  background-color: #cccccc; }
+
+.\+u-bc-delicious {
+  background-color: #0B79E5; }
+
+.\+u-bc-forrst {
+  background-color: #5b9a68; }
+
+.\+u-bc-paypal {
+  background-color: #00437f; }
+
+.\+u-bc-lastfm {
+  background-color: #c3000d; }
+
+.\+u-bc-skype {
+  background-color: #009fe3; }
+
+.\+u-bc-digg {
+  background-color: #333333; }
+
+.\+u-bc-swarm {
+  background-color: #ffb000; }
+
+.\+u-bc-etsy {
+  background-color: #ffb000; }
+
+.\+u-bc-success {
+  background-color: #4FC56B; }
+
+.\+u-bc-info {
+  background-color: #59A7F2; }
+
+.\+u-bc-warning {
+  background-color: #FADB40; }
+
+.\+u-bc-danger {
+  background-color: #F58E45; }
+
+.\+u-bc-error {
+  background-color: #F45757; }
+
+.\+u-c-success {
+  color: #4FC56B; }
+
+.\+u-c-info {
+  color: #59A7F2; }
+
+.\+u-c-warning {
+  color: #FADB40; }
+
+.\+u-c-danger {
+  color: #F58E45; }
+
+.\+u-c-error {
+  color: #F45757; }
+
 /* ==========================================================================
    Utilities - Displays
    ========================================================================== */
-.\+u-block {
+.\+u-d-block {
   display: block; }
 
-.\+u-inline {
+.\+u-d-inline {
   display: inline; }
 
-.\+u-inline-block {
+.\+u-d-inline-block {
   display: inline-block; }
 
-.\+u-table {
+.\+u-d-table {
   display: table; }
 
-.\+u-table-cell {
+.\+u-d-table-cell {
   display: table-cell; }
 
-.\+u-flex {
+.\+u-d-flex {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -762,179 +1379,141 @@ html, body {
 /* ==========================================================================
    Utilities - Silent Extends
    
-   @include extend makes class into extend: @extend %e-three-quarters;
+   @include extend makes class into extend: @extend %e-d-block;
    
    ========================================================================== */
 .o-flag, .o-flag__body {
   width: 100%; }
 
 /* ==========================================================================
-   Utilities Text
+   Utilities Fonts Sizes
    ========================================================================== */
-.\+u-font-massive {
+.\+u-fs-h1x {
   font-size: 6em; }
 
-.\+u-font-huge {
-  font-size: 4.5em; }
-
-.\+u-font-large {
-  font-size: 3.375em; }
-
-.\+u-h1x {
-  font-size: 6em; }
-
-.\+u-h2x {
+.\+u-fs-h2x {
   font-size: 5.25em; }
 
-.\+u-h3x {
+.\+u-fs-h3x {
   font-size: 4.5em; }
 
-.\+u-h4x {
+.\+u-fs-h4x {
   font-size: 3.75em; }
 
-.\+u-h5x {
+.\+u-fs-h5x {
   font-size: 3.375em; }
 
-.\+u-h6x {
+.\+u-fs-h6x {
   font-size: 3em; }
 
-.\+u-h1 {
+.\+u-fs-h1 {
   font-size: 2em; }
 
-.\+u-h2 {
+.\+u-fs-h2 {
   font-size: 1.625em; }
 
-.\+u-h3 {
+.\+u-fs-h3 {
   font-size: 1.375em; }
 
-.\+u-h4 {
+.\+u-fs-h4 {
   font-size: 1.25em; }
 
-.\+u-h5 {
+.\+u-fs-h5 {
   font-size: 1.125em; }
 
-.\+u-h6 {
+.\+u-fs-h6 {
   font-size: 1em; }
 
-.\+u-font-base {
+.\+u-fs-base {
   font-size: 1em; }
 
-.\+u-font-lead {
+.\+u-fs-lead {
   font-size: 1.125em; }
 
-.\+u-font-half {
+.\+u-fs-half {
   font-size: 0.5em; }
 
-.\+u-font-small {
+.\+u-fs-inherit {
+  font-size: inherit; }
+
+.\+u-fs-h7 {
   font-size: 0.875em; }
 
-.\+u-font-tiny {
+.\+u-fs-h8 {
   font-size: 0.75em; }
 
-.\+u-font-micro {
+.\+u-fs-h9 {
   font-size: 0.625em; }
 
-.\+u-h7 {
-  font-size: 0.875em; }
-
-.\+u-h8 {
-  font-size: 0.75em; }
-
-.\+u-h9 {
-  font-size: 0.625em; }
-
-.\+u-h10 {
+.\+u-fs-h10 {
   font-size: 0.5em; }
 
-.\+u-font-normal {
-  font-weight: normal; }
-
-.\+u-font-bold {
-  font-weight: bold; }
-
-.\+u-font-lighter {
-  font-weight: lighter; }
-
-.\+u-font-bolder {
-  font-weight: bolder; }
-
-.\+u-font-100 {
-  font-weight: 100; }
-
-.\+u-font-200 {
-  font-weight: 200; }
-
-.\+u-font-300 {
-  font-weight: 300; }
-
-.\+u-font-400 {
-  font-weight: 400; }
-
-.\+u-font-500 {
-  font-weight: 500; }
-
-.\+u-font-600 {
-  font-weight: 600; }
-
-.\+u-font-700 {
-  font-weight: 700; }
-
-.\+u-font-800 {
-  font-weight: 800; }
-
-.\+u-font-900 {
-  font-weight: 900; }
-
-.\+u-font-normal {
+/* ==========================================================================
+   Utilities Font Styles
+   ========================================================================== */
+.\+u-fs-normal {
   font-style: normal; }
 
-.\+u-font-italic {
+.\+u-fs-italic {
   font-style: italic; }
 
-.\+u-font-oblique {
+.\+u-fs-oblique {
   font-style: oblique; }
+
+/* ==========================================================================
+   Utilities Font Weights
+   ========================================================================== */
+.\+u-fw-100 {
+  font-weight: 100; }
+
+.\+u-fw-200 {
+  font-weight: 200; }
+
+.\+u-fw-300 {
+  font-weight: 300; }
+
+.\+u-fw-400 {
+  font-weight: 400; }
+
+.\+u-fw-500 {
+  font-weight: 500; }
+
+.\+u-fw-600 {
+  font-weight: 600; }
+
+.\+u-fw-700 {
+  font-weight: 700; }
+
+.\+u-fw-800 {
+  font-weight: 800; }
+
+.\+u-fw-900 {
+  font-weight: 900; }
+
+.\+u-fw-normal {
+  font-weight: normal; }
+
+.\+u-fw-bold {
+  font-weight: bold; }
+
+.\+u-fw-lighter {
+  font-weight: lighter; }
+
+.\+u-fw-bolder {
+  font-weight: bolder; }
 
 /*==========================================================================
   Utilities - Mixins
   ========================================================================== */
-.\+u-clearfix:before, .\+u-clearfix:after {
+.\+u-hidden {
+  display: none !important;
+  visibility: hidden; }
+
+.\+u-cf:before, .\+u-cf:after {
   content: "";
   display: table; }
-.\+u-clearfix:after {
+.\+u-cf:after {
   clear: both; }
-
-.\+u-center-content {
-  margin-left: auto;
-  margin-right: auto; }
-
-.\+u-vertical-align-container {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d; }
-
-.\+u-vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
-
-.\+u-vertical-align-table {
-  display: table;
-  border-collapse: collapse;
-  width: 100%; }
-  .\+u-vertical-align-table__inner {
-    display: table-cell;
-    vertical-align: middle; }
-
-.\+u-unstyled {
-  padding-left: 0; }
-  .\+u-unstyled li {
-    list-style: none; }
-  .\+u-unstyled dd {
-    margin-left: 0; }
-
-.\+u-margin-bottom {
-  margin-bottom: 1em; }
 
 .\+u-visually-hidden {
   border: 0;
@@ -946,356 +1525,519 @@ html, body {
   position: absolute;
   width: 1px; }
 
+.\+u-sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.\+u-unstyled {
+  padding-left: 0; }
+  .\+u-unstyled li {
+    list-style: none; }
+  .\+u-unstyled dd {
+    margin-left: 0; }
+
+.\+u-ir {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em; }
+
+.\+u-cc {
+  margin-left: auto;
+  margin-right: auto; }
+
+.\+u-invisible {
+  visibility: hidden; }
+
+.\+u-va-container {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
+
+.\+u-va {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+.\+u-va-table {
+  display: table;
+  border-collapse: collapse;
+  width: 100%; }
+  .\+u-va-table__inner {
+    display: table-cell;
+    vertical-align: middle; }
+
+.\+u-mb {
+  margin-bottom: 1em; }
+
+.\+u-link-block-space {
+  display: block;
+  padding: 1em;
+  margin: -1em; }
+
 /* ==========================================================================
    Utilities Rounded
    ========================================================================== */
-.\+u-round {
+.\+u-r-circle {
   border-radius: 100%; }
 
-.\+u-rounded {
+.\+u-r-all {
   border-radius: 3px; }
 
-.\+u-rounded-t {
+.\+u-r-top {
   border-radius: 3px 3px 0 0; }
 
-.\+u-rounded-tr {
-  border-radius: 0 3px 0 0; }
-
-.\+u-roundde-tl {
-  border-radius: 3px 0 0 0; }
-
-.\+u-rounded-b {
-  border-radius: 0 0 3px 3px; }
-
-.\+u-rounded-br {
-  border-radius: 0 0 3px 0; }
-
-.\+u-rounded-bl {
-  border-radius: 0 0 0 3px; }
-
-.\+u-rounded-l {
+.\+u-r-left {
   border-radius: 3px 0 0 3px; }
 
-.\+u-rounded-r {
+.\+u-r-right {
   border-radius: 0 3px 3px 0; }
 
-.\+u-reset-rounded {
+.\+u-r-bottom {
+  border-radius: 0 0 3px 3px; }
+
+.\+u-r-tl {
+  border-radius: 3px 0 0 0; }
+
+.\+u-r-tr {
+  border-radius: 0 3px 0 0; }
+
+.\+u-r-br {
+  border-radius: 0 0 3px 0; }
+
+.\+u-r-bl {
+  border-radius: 0 0 0 3px; }
+
+.\+u-r-reset {
   border-radius: 0; }
 
 /* ==========================================================================
    Utilities - Spaces
    ========================================================================== */
-.\+u-mt-sixth {
+.\+u-s-mt-1\/6 {
   margin-top: 0.1666666667em !important; }
 
-.\+u-mr-sixth {
+.\+u-s-mr-1\/6 {
   margin-right: 0.1666666667em !important; }
 
-.\+u-mb-sixth {
+.\+u-s-mb-1\/6 {
   margin-bottom: 0.1666666667em !important; }
 
-.\+u-ml-sixth {
+.\+u-s-ml-1\/6 {
   margin-left: 0.1666666667em !important; }
 
-.\+u-mt-fifth {
+.\+u-s-m-1\/6 {
+  margin: 0.1666666667em !important; }
+
+.\+u-s-mt-1\/5 {
   margin-top: 0.2em !important; }
 
-.\+u-mr-fifth {
+.\+u-s-mr-1\/5 {
   margin-right: 0.2em !important; }
 
-.\+u-mb-fifth {
+.\+u-s-mb-1\/5 {
   margin-bottom: 0.2em !important; }
 
-.\+u-ml-fifth {
+.\+u-s-ml-1\/5 {
   margin-left: 0.2em !important; }
 
-.\+u-mt-quarter {
+.\+u-s-m-1\/5 {
+  margin: 0.2em !important; }
+
+.\+u-s-mt-1\/4 {
   margin-top: 0.25em !important; }
 
-.\+u-mr-quarter {
+.\+u-s-mr-1\/4 {
   margin-right: 0.25em !important; }
 
-.\+u-mb-quarter {
+.\+u-s-mb-1\/4 {
   margin-bottom: 0.25em !important; }
 
-.\+u-ml-quarter {
+.\+u-s-ml-1\/4 {
   margin-left: 0.25em !important; }
 
-.\+u-mt-third {
+.\+u-s-m-1\/4 {
+  margin: 0.25em !important; }
+
+.\+u-s-mt-1\/3 {
   margin-top: 0.3333333333em !important; }
 
-.\+u-mr-third {
+.\+u-s-mr-1\/3 {
   margin-right: 0.3333333333em !important; }
 
-.\+u-mb-third {
+.\+u-s-mb-1\/3 {
   margin-bottom: 0.3333333333em !important; }
 
-.\+u-ml-third {
+.\+u-s-ml-1\/3 {
   margin-left: 0.3333333333em !important; }
 
-.\+u-mt-half {
+.\+u-s-m-1\/3 {
+  margin: 0.25em !important; }
+
+.\+u-s-mt-1\/2 {
   margin-top: 0.5em !important; }
 
-.\+u-mr-half {
+.\+u-s-mr-1\/2 {
   margin-right: 0.5em !important; }
 
-.\+u-mb-half {
+.\+u-s-mb-1\/2 {
   margin-bottom: 0.5em !important; }
 
-.\+u-ml-half {
+.\+u-s-ml-1\/2 {
   margin-left: 0.5em !important; }
 
-.\+u-mt {
+.\+u-s-m-1\/2 {
+  margin: 0.25em !important; }
+
+.\+u-s-mt-0 {
+  margin-top: 0 !important; }
+
+.\+u-s-mr-0 {
+  margin-right: 0 !important; }
+
+.\+u-s-mb-0 {
+  margin-bottom: 0 !important; }
+
+.\+u-s-ml-0 {
+  margin-left: 0 !important; }
+
+.\+u-s-m-0 {
+  margin: 0 !important; }
+
+.\+u-s-mt {
   margin-top: 1em !important; }
 
-.\+u-mr {
+.\+u-s-mr {
   margin-right: 1em !important; }
 
-.\+u-mb {
+.\+u-s-mb {
   margin-bottom: 1em !important; }
 
-.\+u-ml {
+.\+u-s-ml {
   margin-left: 1em !important; }
 
-.\+u-mt-1-half {
+.\+u-s-m {
+  margin: 1em !important; }
+
+.\+u-s-mt-1-1\/2 {
   margin-top: 1.5em !important; }
 
-.\+u-mr-1-half {
+.\+u-s-mr-1-1\/2 {
   margin-right: 1.5em !important; }
 
-.\+u-mb-1-half {
+.\+u-s-mb-1-1\/2 {
   margin-bottom: 1.5em !important; }
 
-.\+u-ml-1-half {
+.\+u-s-ml-1-1\/2 {
   margin-left: 1.5em !important; }
 
-.\+u-mt-2 {
+.\+u-s-m-1-1\/2 {
+  margin: 1.5em !important; }
+
+.\+u-s-mt-2 {
   margin-top: 2em !important; }
 
-.\+u-mr-2 {
+.\+u-s-mr-2 {
   margin-right: 2em !important; }
 
-.\+u-mb-2 {
+.\+u-s-mb-2 {
   margin-bottom: 2em !important; }
 
-.\+u-ml-2 {
+.\+u-s-ml-2 {
   margin-left: 2em !important; }
 
-.\+u-mt-3 {
+.\+u-s-m-2 {
+  margin: 2em !important; }
+
+.\+u-s-mt-3 {
   margin-top: 3em !important; }
 
-.\+u-mr-3 {
+.\+u-s-mr-3 {
   margin-right: 3em !important; }
 
-.\+u-mb-3 {
+.\+u-s-mb-3 {
   margin-bottom: 3em !important; }
 
-.\+u-ml-3 {
+.\+u-s-ml-3 {
   margin-left: 3em !important; }
 
-.\+u-mt-4 {
+.\+u-s-m-3 {
+  margin: 3em !important; }
+
+.\+u-s-mt-4 {
   margin-top: 4em !important; }
 
-.\+u-mr-4 {
+.\+u-s-mr-4 {
   margin-right: 4em !important; }
 
-.\+u-mb-4 {
+.\+u-s-mb-4 {
   margin-bottom: 4em !important; }
 
-.\+u-ml-4 {
+.\+u-s-ml-4 {
   margin-left: 4em !important; }
 
-.\+u-mt-5 {
+.\+u-s-m-4 {
+  margin: 4em !important; }
+
+.\+u-s-mt-5 {
   margin-top: 5em !important; }
 
-.\+u-mr-5 {
+.\+u-s-mr-5 {
   margin-right: 5em !important; }
 
-.\+u-mb-5 {
+.\+u-s-mb-5 {
   margin-bottom: 5em !important; }
 
-.\+u-ml-5 {
+.\+u-s-ml-5 {
   margin-left: 5em !important; }
 
-.\+u-mt-6 {
+.\+u-s-m-5 {
+  margin: 5em !important; }
+
+.\+u-s-mt-6 {
   margin-top: 6em !important; }
 
-.\+u-mr-6 {
+.\+u-s-mr-6 {
   margin-right: 6em !important; }
 
-.\+u-mb-6 {
+.\+u-s-mb-6 {
   margin-bottom: 6em !important; }
 
-.\+u-ml-6 {
+.\+u-s-ml-6 {
   margin-left: 6em !important; }
 
-.\+u-pt-sixth {
+.\+u-s-m-6 {
+  margin: 6em !important; }
+
+.\+u-s-pt-1\/6 {
   padding-top: 0.1666666667em !important; }
 
-.\+u-pr-sixth {
+.\+u-s-pr-1\/6 {
   padding-right: 0.1666666667em !important; }
 
-.\+u-pb-sixth {
+.\+u-s-pb-1\/6 {
   padding-bottom: 0.1666666667em !important; }
 
-.\+u-pl-sixth {
+.\+u-s-pl-1\/6 {
   padding-left: 0.1666666667em !important; }
 
-.\+u-pt-fifth {
+.\+u-s-p-1\/6 {
+  padding: 0.1666666667em !important; }
+
+.\+u-s-pt-1\/5 {
   padding-top: 0.2em !important; }
 
-.\+u-pr-fifth {
+.\+u-s-pr-1\/5 {
   padding-right: 0.2em !important; }
 
-.\+u-pb-fifth {
+.\+u-s-pb-1\/5 {
   padding-bottom: 0.2em !important; }
 
-.\+u-pl-fifth {
+.\+u-s-pl-1\/5 {
   padding-left: 0.2em !important; }
 
-.\+u-pt-quarter {
+.\+u-s-p-1\/5 {
+  padding: 0.2em !important; }
+
+.\+u-s-pt-1\/4 {
   padding-top: 0.25em !important; }
 
-.\+u-pr-quarter {
+.\+u-s-pr-1\/4 {
   padding-right: 0.25em !important; }
 
-.\+u-pb-quarter {
+.\+u-s-pb-1\/4 {
   padding-bottom: 0.25em !important; }
 
-.\+u-pl-quarter {
+.\+u-s-pl-1\/4 {
   padding-left: 0.25em !important; }
 
-.\+u-pt-third {
+.\+u-s-p-1\/4 {
+  padding: 0.25em !important; }
+
+.\+u-s-pt-1\/3 {
   padding-top: 0.3333333333em !important; }
 
-.\+u-pr-third {
+.\+u-s-pr-1\/3 {
   padding-right: 0.3333333333em !important; }
 
-.\+u-pb-third {
+.\+u-s-pb-1\/3 {
   padding-bottom: 0.3333333333em !important; }
 
-.\+u-pl-third {
+.\+u-s-pl-1\/3 {
   padding-left: 0.3333333333em !important; }
 
-.\+u-pt-half {
+.\+u-s-p-1\/3 {
+  padding: 0.3333333333em !important; }
+
+.\+u-s-pt-1\/2 {
   padding-top: 0.5em !important; }
 
-.\+u-pr-half {
+.\+u-s-pr-1\/2 {
   padding-right: 0.5em !important; }
 
-.\+u-pb-half {
+.\+u-s-pb-1\/2 {
   padding-bottom: 0.5em !important; }
 
-.\+u-pl-half {
+.\+u-s-pl-1\/2 {
   padding-left: 0.5em !important; }
 
-.\+u-pt {
+.\+u-s-p-1\/2 {
+  padding: 0.5em !important; }
+
+.\+u-s-pt-0 {
+  padding-top: 0 !important; }
+
+.\+u-s-pr-0 {
+  padding-right: 0 !important; }
+
+.\+u-s-pb-0 {
+  padding-bottom: 0 !important; }
+
+.\+u-s-pl-0 {
+  padding-left: 0 !important; }
+
+.\+u-s-p-0 {
+  padding: 0 !important; }
+
+.\+u-s-pt {
   padding-top: 1em !important; }
 
-.\+u-pr {
+.\+u-s-pr {
   padding-right: 1em !important; }
 
-.\+u-pb {
+.\+u-s-pb {
   padding-bottom: 1em !important; }
 
-.\+u-pl {
+.\+u-s-pl {
   padding-left: 1em !important; }
 
-.\+u-pt-1-half {
+.\+u-s-p {
+  padding: 1em !important; }
+
+.\+u-s-pt-1-1\/2 {
   padding-top: 1.5em !important; }
 
-.\+u-pr-1-half {
+.\+u-s-pr-1-1\/2 {
   padding-right: 1.5em !important; }
 
-.\+u-pb-1-half {
+.\+u-s-pb-1-1\/2 {
   padding-bottom: 1.5em !important; }
 
-.\+u-pl-1-half {
+.\+u-s-pl-1-1\/2 {
   padding-left: 1.5em !important; }
 
-.\+u-pt-2 {
+.\+u-s-p-1-1\/2 {
+  padding: 1.5em !important; }
+
+.\+u-s-pt-2 {
   padding-top: 2em !important; }
 
-.\+u-pr-2 {
+.\+u-s-pr-2 {
   padding-right: 2em !important; }
 
-.\+u-pb-2 {
+.\+u-s-pb-2 {
   padding-bottom: 2em !important; }
 
-.\+u-pl-2 {
+.\+u-s-pl-2 {
   padding-left: 2em !important; }
 
-.\+u-pt-3 {
+.\+u-s-p-2 {
+  padding: 2em !important; }
+
+.\+u-s-pt-3 {
   padding-top: 3em !important; }
 
-.\+u-pr-3 {
+.\+u-s-pr-3 {
   padding-right: 3em !important; }
 
-.\+u-pb-3 {
+.\+u-s-pb-3 {
   padding-bottom: 3em !important; }
 
-.\+u-pl-3 {
+.\+u-s-pl-3 {
   padding-left: 3em !important; }
 
-.\+u-pt-4 {
+.\+u-s-p-3 {
+  padding: 3em !important; }
+
+.\+u-s-pt-4 {
   padding-top: 4em !important; }
 
-.\+u-pr-4 {
+.\+u-s-pr-4 {
   padding-right: 4em !important; }
 
-.\+u-pb-4 {
+.\+u-s-pb-4 {
   padding-bottom: 4em !important; }
 
-.\+u-pl-4 {
+.\+u-s-pl-4 {
   padding-left: 4em !important; }
 
-.\+u-pt-5 {
+.\+u-s-p-4 {
+  padding: 4em !important; }
+
+.\+u-s-pt-5 {
   padding-top: 5em !important; }
 
-.\+u-pr-5 {
+.\+u-s-pr-5 {
   padding-right: 5em !important; }
 
-.\+u-pb-5 {
+.\+u-s-pb-5 {
   padding-bottom: 5em !important; }
 
-.\+u-pl-5 {
+.\+u-s-pl-5 {
   padding-left: 5em !important; }
 
-.\+u-pt-6 {
+.\+u-s-p-5 {
+  padding: 5em !important; }
+
+.\+u-s-pt-6 {
   padding-top: 6em !important; }
 
-.\+u-pr-6 {
+.\+u-s-pr-6 {
   padding-right: 6em !important; }
 
-.\+u-pb-6 {
+.\+u-s-pb-6 {
   padding-bottom: 6em !important; }
 
-.\+u-pl-6 {
+.\+u-s-pl-6 {
   padding-left: 6em !important; }
+
+.\+u-s-p-6 {
+  padding: 6em !important; }
 
 /* ==========================================================================
    Utilities Text
    ========================================================================== */
-.\+u-text-underline {
+.\+u-td-underline {
   text-decoration: underline; }
 
-.\+u-text-lower {
+.\+u-tt-lower {
   text-transform: lowercase; }
 
-.\+u-text-upper {
+.\+u-tt-upper {
   text-transform: uppercase; }
 
-.\+u-text-caps {
+.\+u-tt-caps {
   text-transform: capitalize; }
 
-.\+u-text-left {
+.\+u-ta-left {
   text-align: left; }
 
-.\+u-text-right {
+.\+u-ta-right {
   text-align: right; }
 
-.\+u-text-center {
+.\+u-ta-center {
   text-align: center; }
 
-.\+u-text-justify {
+.\+u-ta-justify {
   text-align: justify; }
