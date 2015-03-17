@@ -501,22 +501,19 @@ hr, figure {
 a {
   vertical-align: baseline;
   font-size: 100%;
-  -webkit-transition: color .25s;
-          transition: color .25s; }
+  transition: color .25s; }
   a, a:hover {
     color: #2046df;
     text-decoration: none; }
   a:hover {
     color: #ec1831; }
   a:active {
-    -webkit-transition: none;
-            transition: none;
+    transition: none;
     color: #ff001e;
     text-decoration: underline; }
   a:visited {
     color: #d01fe0;
-    -webkit-transition: none;
-            transition: none;
+    transition: none;
     text-decoration: none; }
 
 /* ==========================================================================
@@ -1154,7 +1151,6 @@ dfn[title] {
   display: table-cell; }
 
 .\+u-d-flex {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
@@ -1945,8 +1941,7 @@ html, body {
         margin: 2.5%; } }
     .m-social-gallery__item a {
       padding: 27%;
-      -webkit-transition: all 0.1s;
-              transition: all 0.1s; }
+      transition: all 0.1s; }
       @media (min-width: 38.75em) {
         .m-social-gallery__item a {
           padding: 25%; } }
@@ -1954,5 +1949,4 @@ html, body {
         -webkit-transform: scale(1.25);
             -ms-transform: scale(1.25);
                 transform: scale(1.25);
-        -webkit-transition: all 0.08s;
-                transition: all 0.08s; }
+        transition: all 0.08s; }
